@@ -1,0 +1,22 @@
+%python
+import pandas as pd
+
+# Input data (left side)
+input_data = [
+    [1, 0, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 1, 0],
+    [0, 0, 0, 1]
+]
+
+# Calculate the sum for each row
+output_data = [[sum(row)] * len(row) for row in input_data]
+
+# Create a DataFrame with both input and output columns
+df = pd.DataFrame({
+    'Input Data': input_data,
+    'Expected Output': output_data
+})
+
+# Display the DataFrame 
+print(df)
